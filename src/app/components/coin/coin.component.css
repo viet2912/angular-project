@@ -1,0 +1,26 @@
+:host .stock-card {
+    /* background: ; */
+}
+
+:host .stock-card.increase {
+    background: #558b2f;
+    /* color: #fff; */
+}
+
+:host .stock-card.decrease {
+    background: #c62828;
+    /* color: #fff; */
+}
+
+.mdl-card__title h1 {
+    font-weight: bold;
+}
+
+.main-information h2 strong {
+    color: #1976d2;
+    font-size: 150%;
+}
+
+.mdl-card__title h5 {
+    color: #9e9e9e;
+}

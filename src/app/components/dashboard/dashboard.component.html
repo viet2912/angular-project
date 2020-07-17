@@ -1,0 +1,28 @@
+<!-- <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col" *ngIf="!stocks" style="text-align: center;"> Loading </div>
+  <div class="mdl-cell mdl-cell--3-col" *ngFor="let stock of stocks">
+        <app-summary [stock]="stock"></app-summary>
+    </div>
+
+</div> -->
+
+
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+        <app-metric [used]="cpu.used" [available]="cpu.available">
+            <metric-title>CPU</metric-title>
+            <metric-description>utilization of CPU cores</metric-description>
+        </app-metric>
+        <app-metric [used]="mem.used" [available]="mem.available">
+            <metric-title>Memory</metric-title>
+            <metric-description>utilization of memory in GB</metric-description>
+        </app-metric>
+    </div>
+</div>
+
+
+<table app-nodes class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <tbody>
+        <tr app-nodes-row *ngFor="let node of cluster1" [node]="node"></tr>
+    </tbody>
+</table>

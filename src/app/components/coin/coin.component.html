@@ -1,0 +1,15 @@
+<div class="mdl-card stock-card mdl-shadow--2dp" [ngClass]="{increase: isPositive(), decrease: isNegative()}" style="width: 100%;">
+    <span>
+  <div class="mdl-card__title">
+    <h1>
+      {{coin?.name}}
+    </h1>
+    <h3 class="mdl-card__supporting-text">Market_cap_rank : {{coin.market_cap_rank}}</h3>
+    <div class="main-information">
+      <h3>circulating_supply: {{coin?.market_data?.circulating_supply}}</h3>
+      <h2>Current price: <strong>{{coin?.market_data?.current_price['usd'] | currency:'USD':'symbol':'.2'}}</strong></h2>
+      <h5>Previous price: {{previousPrice['usd']}}</h5>
+    </div>
+  </div>
+</span>
+</div>
