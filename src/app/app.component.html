@@ -2,26 +2,14 @@
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row"> <span class="mdl-layout-title">Stock Tracker</span>
             <div class="mdl-layout-spacer"></div>
-            <app-navbar></app-navbar>
+            <app-navbar (onRefresh)="refresh()"></app-navbar>
         </div>
     </header>
     <div>
-        <!-- <main class="mdl-layout__content" style="padding: 20px;" *ngIf="chainlink">
-            <app-coin [coin]="chainlink"></app-coin>
-        </main>
-        <main class="mdl-layout__content" style="padding: 20px;" *ngIf="cardano">
-            <app-coin [coin]="cardano"></app-coin>
-        </main>
-        <main class="mdl-layout__content" style="padding: 20px;" *ngIf="btcv">
-            <app-coin [coin]="btcv"></app-coin>
-        </main>
-        <main class="mdl-layout__content" style="padding: 20px;" *ngIf="btc">
-            <app-coin [coin]="btc"></app-coin>
-        </main> -->
         <main class="mdl-layout__content" style="padding: 20px;">
-            <!-- <app-dashboard></app-dashboard> -->
+            <app-dashboard #dashboard></app-dashboard>
             <!-- <app-manage></app-manage> -->
-            <router-outlet></router-outlet>
+            <!-- <router-outlet></router-outlet> -->
         </main>
     </div>
 </div>
